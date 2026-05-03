@@ -1,0 +1,26 @@
+# config/settings.yaml
+
+pipeline:
+  # 是否在发布前要求人工确认
+  require_confirmation: true
+  # 单步超时（秒）
+  step_timeout: 30
+  # 失败重试次数
+  max_retries: 2
+
+converter:
+  # 文案风格：casual(种草风) / professional(专业风) / concise(简洁风)
+  copy_style: casual
+  # 定价策略：keep(保持原价) / markup(加价) / competitive(竞品参考)
+  pricing_strategy: competitive
+  # 默认加价比例（markup 策略下）
+  markup_ratio: 0.05
+  # 图片最大宽度（视频号限制）
+  image_max_width: 750
+  # 图片最大文字密度（%）
+  image_max_text_ratio: 0.4
+
+logging:
+  level: INFO
+  format: rich  # rich / json / plain
+  file: logs/sync.log
